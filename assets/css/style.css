@@ -496,178 +496,99 @@ section {
   border: 2px solid #1f5297;
 }
 
-    
-        
-
-
-/*--------------------------------------------------------------
-# Project
---------------------------------------------------------------*/
-.Project .Project-item {
-  margin-bottom: 30px;
+/* Project Information */
+#Project-info {
+  background-color:  lightgray;
+  padding: 32px 0;
 }
 
-.Project #Project-flters {
-  padding: 0;
-  margin: 0 auto 35px auto;
-  list-style: none;
-  text-align: center;
-  background: #fff;
-  border-radius: 50px;
-  padding: 2px 15px;
+#Project-info h2 {
+  text-align: left;
+  margin: 32px 0;
+}
+#Project-info .image-container img {
+  max-width: 100%;
+  height: auto; 
 }
 
-.Project #Project-flters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 10px 15px 8px 15px;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1;
-  text-transform: uppercase;
-  color: #272829;
-  margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
-}
-
-.Project #Project-flters li:hover,
-.Project #Project-flters li.filter-active {
-  color: #149ddd;
-}
-
-.Project #Project-flters li:last-child {
-  margin-right: 0;
-}
-
-.Project .Project-wrap {
-  transition: 0.3s;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.Project .Project-wrap::before {
-  content: "";
-  background: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  transition: all ease-in-out 0.3s;
-  z-index: 2;
-  opacity: 0;
-}
-
-.Project .Project-wrap .Project-links {
-  opacity: 1;
-  left: 0;
-  right: 0;
-  bottom: -60px;
-  z-index: 3;
-  position: absolute;
-  transition: all ease-in-out 0.3s;
+#Project-info .Project-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
-.Project .Project-wrap .Project-links a {
-  color: #fff;
-  font-size: 28px;
-  text-align: center;
-  background: rgba(20, 157, 221, 0.75);
-  transition: 0.3s;
-  width: 50%;
+#Project-info .Projects {
+  max-width: 24%;
+  margin: 16px;
+  background-color: white;
+  border-radius: 10px 10px 10px 10px;
+  transition: all 0.5s ease-in 0.1s;
 }
 
-.Project .Project-wrap .Project-links a:hover {
-  background: rgba(20, 157, 221, 0.95);
+#Project-info .Projects:hover {
+
+  max-width: 28%;
 }
 
-.Project .Project-wrap .Project-links a+a {
-  border-left: 1px solid #37b3ed;
+#Project-info .content {
+  padding: 32px 32px 24px;
 }
 
-.Project .Project-wrap:hover::before {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 1;
+#Project-info .content h3 {
+  margin-bottom: 16px;
+  color: gray;
 }
 
-.Project .Project-wrap:hover .Project-links {
-  opacity: 1;
-  bottom: 0;
+#Project-info .content p {
+  line-height: 1.5;
+  color: gray;
+  font-size: 1.125rem;
+}
+
+#Project-info .Projects-label {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+@media only screen and (max-width: 900px) {
+
+  #Project-info .Projects {
+      min-width: 36%;
+  }
+
+  #Project-info .Projects:hover {
+      min-width: 40%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+
+  #Project-info p {
+      display: none;
+  }
+
+  #Project-info .Project-container {
+      flex-flow: column;
+      align-items: center;
+  }
+
+  #Project-info .Projects {
+      background-color: lightgray;
+      opacity: 0.9;
+      margin: 8px 24px;
+      max-width: 80%;
+  }
+
+  #Project-info .Projects:hover {
+      max-width: 100%;
+  }
+
+  #Project-info h3 {
+      font-size: 32px;
+  }
 }
 
 /*--------------------------------------------------------------
-# Project Details
---------------------------------------------------------------*/
-.Project-details {
-  padding-top: 40px;
-}
-
-.Project-details .Project-details-slider img {
-  width: 100%;
-}
-
-.Project-details .Project-details-slider .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.Project-details .Project-details-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  border: 1px solid #149ddd;
-}
-
-.Project-details .Project-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #149ddd;
-}
-
-.Project-details .Project-info {
-  padding: 30px;
-  box-shadow: 0px 0 30px rgba(5, 13, 24, 0.08);
-}
-
-.Project-details .Project-info h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-}
-
-.Project-details .Project-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.Project-details .Project-info ul li+li {
-  margin-top: 10px;
-}
-
-.Project-details .Project-description {
-  padding-top: 30px;
-}
-
-.Project-details .Project-description h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.Project-details .Project-description p {
-  padding: 0;
-}
-
-/* 
- /*--------------------------------------------------------------
 # certificate
 --------------------------------------------------------------*/
 .certificate .icon-box {
